@@ -28,10 +28,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public",{ index : false }));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/mongoHeadlines";
 
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/mongoHeadlines");
+console.log(process.env.MONGODB_URI);
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, function(err, db) {
@@ -53,7 +54,7 @@ app.get("/scrape", function(req, res) {
   axios.get("http://www.echojs.com/").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     console.log("scrape ajax call");
-    
+
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
