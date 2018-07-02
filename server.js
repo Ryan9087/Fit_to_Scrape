@@ -37,6 +37,8 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, function(err, db) {
   if(err) {
     console.log("Unable to connect to db");
+  } else {
+    console.log("connected to db");    
   }
 });
 
@@ -50,6 +52,8 @@ app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   axios.get("http://www.echojs.com/").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
+    console.log("scrape ajax call");
+    
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
