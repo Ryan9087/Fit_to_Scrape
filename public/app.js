@@ -24,7 +24,7 @@ $('#scrape-bttn').on("click", function() {
         articleDiv.attr('class', 'article');
 
         var titleDiv = $('<div>');
-        titleDiv.attr('data-id', data[i]._id);        
+        titleDiv.attr('data-id', data[i]._id);      
         titleDiv.attr('class', 'article-title');
         titleDiv.text(data[i].title);
 
@@ -40,6 +40,7 @@ $('#scrape-bttn').on("click", function() {
     });
   });
 });
+
 
 // Whenever someone clicks a p tag
 $(document).on("click", ".article-title", function() {

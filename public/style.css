@@ -1,10 +1,46 @@
 body { 
-    background-color: #F2F6D0;
-    margin: 5px;
+    background-image: url("images/mongobackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    /* margin: 5px; */
+}
+
+button {
+    border: none;
+}
+
+#header {
+  padding: 80px 0 40px 0;
+  text-align: center;
+}
+
+h1 {
+    font-family: 'Galada', cursive;
+    font-size: 46pt;
+    padding: 0px;
+    margin: 0px;
+    text-shadow:
+    -3px -3px 0 rgb(0, 36, 1),
+    3px -3px 0 rgb(0, 36, 1),
+    -3px 3px 0 rgb(0, 36, 1),
+    3px 3px 0 rgb(0, 36, 1);
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12pt;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000000;
+    margin: 0px 0 10px 0;
+}
+
+#container {
+    margin: 0 10% 0 10%;
+    color: white;
 }
 
 .my-button {
-    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 5px 15px;
@@ -19,16 +55,33 @@ body {
 }
 
 #scrape-bttn {
-    background-color: #4CAF50;
+    background-color: rgb(206, 107, 2);
     border: none;
     color: white;
     padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 14px;
     margin: 5px 3px;
     cursor: pointer; 
+    box-shadow: 2px 2px black;
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+#savenote {
+    background-color: rgb(206, 107, 2);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    padding: 5px 15px;
+    border: none;
+    box-shadow: 2px 2px black;
+    text-shadow: 1px 1px 2px #000000;
+    letter-spacing: 2px;
 }
 
 #wrapper {
@@ -44,14 +97,17 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
-    height: 700px;
+    height: 1000px;
+    padding: 0 0 0 10px;
+    
 }
 
 .article {
     width: 100%;
     height: 100px;
     margin-bottom: 15px;
-
+    box-shadow: 2px 2px black;
+    
 }
 
 .article-title {
@@ -62,7 +118,9 @@ body {
     font-weight: bold;
     line-height: 50px;
     font-size: 17px;
-    padding-left: 5px;
+    padding-left: 15px;
+    letter-spacing: 2px;
+    background-color: rgb(0, 36, 1);
 }
 
 .article-link {
@@ -70,18 +128,22 @@ body {
     color: gray;
     width: 100%;
     height: 50px;  
-    padding-left: 10px;
+    padding-left: 15px;
     line-height: 50px;
+    font-size: 11pt;
+    
 }
 
 #notes {
     flex-basis: 30%;
+    padding: 0 0 0 30px;
 }
 
 textarea, input {
   display: block;
   width: 100%;
-  background-color: #FCF5C7;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 2px 2px rgb(0, 58, 0);
 }
 input {
   height: 36px;
