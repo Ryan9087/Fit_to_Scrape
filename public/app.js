@@ -28,9 +28,17 @@ $('#scrape-bttn').on("click", function() {
         titleDiv.attr('class', 'article-title');
         titleDiv.text(data[i].title);
 
+        var button = $('<button>' , {
+          class: "note-bttn"
+        });
+        button.text('create note');
+        titleDiv.append(button);
+
         var linkDiv = $('<div>');
         linkDiv.attr('class', 'article-link');
-        linkDiv.text(data[i].link);
+        newLink = $("<a>").attr("href",data[i].link);
+        newLink.text(data[i].link);
+        linkDiv.append(newLink);
 
         articleDiv.append(titleDiv);
         articleDiv.append(linkDiv);
