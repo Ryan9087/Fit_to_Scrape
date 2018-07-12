@@ -31,7 +31,7 @@ $('#scrape-bttn').on("click", function() {
         var button = $('<button>' , {
           class: "note-bttn"
         });
-        button.text('create note');
+        button.text('Create Note');
         titleDiv.append(button);
 
         var linkDiv = $('<div>');
